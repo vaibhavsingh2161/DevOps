@@ -89,7 +89,20 @@ def mergeSort(arr):
 
     return arr
 
+#Author: Don Paul
 
+def quickSort(arr):
+    """
+    Sorts an array using the quick sort algorithm.
+    """
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[len(arr) // 2]
+        left = [x for x in arr if x < pivot]
+        middle = [x for x in arr if x == pivot]
+        right = [x for x in arr if x > pivot]
+        return quickSort(left) + middle + quickSort(right)
 
 
  
